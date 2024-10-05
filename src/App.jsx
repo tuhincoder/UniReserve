@@ -1,13 +1,17 @@
 
+import { Outlet } from 'react-router-dom'
 import './App.css'
+import MainLayout from './Layout/MainLayout'
 
 function App() {
 
 
   return (
-    <>
-      <h2 className='text-2xl font-bold'>this is booking</h2>
-    </>
+    <div>
+      <MainLayout>
+        <Outlet></Outlet>
+      </MainLayout>
+    </div>
   )
 }
 
