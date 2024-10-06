@@ -2,15 +2,19 @@
 import { Outlet, Router } from 'react-router-dom'
 import './App.css'
 import MainLayout from './Layout/MainLayout'
+import Footer from './component/utils/Shared/Footer/Footer'
 
 function App() {
 
 
   return (
     <div>
-      <MainLayout>
-        <Outlet></Outlet>
-      </MainLayout>
+      <div className='h-screen'>
+        <MainLayout>
+          <Outlet></Outlet>
+        </MainLayout>
+      </div>
+      <Footer></Footer>
     </div>
   )
 }

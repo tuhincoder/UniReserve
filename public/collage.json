@@ -1,0 +1,65 @@
+[
+    {
+        "image": "https://i.ibb.co.com/d72QFS0/american.jpg",
+        "name": "Pomona College",
+        "admission_dates": "November 15, 2024 to Mid-December 2024",
+        "events": [
+            {
+                "event1": "Claremont Colleges Music Festival",
+                "event2": "Public Lectures and Guest Speakers",
+                "event3": "Cultural Festivals"
+            }
+        ],
+        "location": "Claremont, California.",
+        "research_history": "Pomona College, founded in 1887, emphasizes undergraduate research across diverse fields, encouraging collaboration between students and faculty. Programs like the Summer Undergraduate Research Program (SURP) foster hands-on experiences in STEM, humanities, and social sciences. This commitment to research cultivates critical thinking and prepares students for advanced study and professional careers",
+        "sports": [
+            {
+                "sports1": "Varsity Sports",
+                "sports2": "Athletic Facilities",
+                "sports3": "Philosophy of Sports"
+            }
+        ]
+    },
+    {
+        "image": "https://i.ibb.co.com/rmpm72r/nottr.jpg",
+        "name": "Notre Dame College, Dhaka",
+        "admission_dates": "May 25, 2024, to May 30, 2024",
+        "events": [
+            {
+                "event1": "7th National Adventure Festival ",
+                "event2": "World Environment Day Celebration",
+                "event3": "Lensation Photography Event"
+            }
+        ],
+        "location": "Dhaka, Bangladesh",
+        "research_history": "Notre Dame College, founded in 1949, integrates research into its academic framework, emphasizing quality education and social responsibility. Faculty and students engage in community-focused research, promoting critical thinking and addressing local issues. The college’s commitment to social justice further shapes its research initiatives and educational objectives​(Happening Next)​(NDC Website).",
+        "sports": [
+            {
+                "sports1": "Diverse Sports Programs",
+                "sports2": "Annual Sports Events",
+                "sports3": "Focus on Holistic Development"
+            }
+        ]
+    },
+    {
+        "image": "https://i.ibb.co.com/MRMnMSB/uttara.jpg",
+        "name": "rajuk uttara model college",
+        "admission_dates": "May 5, 2025​",
+        "events": [
+            {
+                "event1": "Rajuk National SciSpark 3.0",
+                "event2": "RCCC Intra Cultural Carnival 2024",
+                "event3": "Sports Day"
+            }
+        ],
+        "location": "Dhaka, Bangladesh",
+        "research_history": "Rajuk Uttara Model College, founded in 1994, fosters a strong research culture, encouraging both students and faculty to engage in meaningful projects. Through workshops and collaborative initiatives, the college promotes critical thinking and practical applications of research, enhancing the academic experience and addressing local and national issues​(AllEvents.in)​(Happening Next). For more details, visit the college's official website.",
+        "sports": [
+            {
+                "sports1": "Diverse Sports Activities",
+                "sports2": "Annual Sports Day",
+                "sports3": "Training and Coaching"
+            }
+        ]
+    }
+]

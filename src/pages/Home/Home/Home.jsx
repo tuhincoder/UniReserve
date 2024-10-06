@@ -1,8 +1,9 @@
+import CollageCard from "../CollageCard/CollageCard";
 
 const Home = () => {
     return (
         <div>
-            <h1>home page</h1>
+            <CollageCard />
         </div>
     );
 };
