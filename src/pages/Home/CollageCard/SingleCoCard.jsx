@@ -2,6 +2,7 @@
 
 const SingleCoCard = ({ singleData }) => {
     const { image, name, admission_dates, events, research_history, sports } = singleData || {};
+    console.log(sports[0]);
     return (
         <div>
             <div className="card glass">
@@ -13,10 +14,29 @@ const SingleCoCard = ({ singleData }) => {
                         alt="car!" />
                 </figure>
                 <div className="card-body">
-                    <h2 className="card-title">Life hack</h2>
-                    <p>How to park your car at your garage?</p>
+                    <span className=" relative -mt-16 justify-center items-center flex bg-gray-300 px-3 right-0 text-end text-black h-[50px] shadow-inner shadow-transparent rounded-md">Admission Date: {admission_dates}</span>
+                    <div className="">
+                        <h2 className="text-xl capitalize text-center">{name}</h2>
+                        <p></p>
+                    </div>
+                    <div className="text-sm text-gray-400 flex justify-between">
+                        <div>
+                            <h5 className="text-[#890c25] font-medium">Events:</h5>
+                            <p >{events[0].event1}</p>
+                            <p >{events[0].event2}</p>
+                            <p >{events[0].event3}</p>
+                        </div>
+                        <div className="">
+                            <h3 className="text-[#890c25] font-medium">Sports: </h3>
+                            <p>{sports[0].sports1}</p>
+                            <p>{sports[0].sports2}</p>
+                            <p>{sports[0].sports3}</p>
+                        </div>
+
+                    </div>
+                    <p>{research_history.length > 0 && research_history.slice(0, 100)}....</p>
                     <div className="card-actions justify-end">
-                        <button className="btn btn-primary">Learn now!</button>
+                        <button className="btn btn-primary"></button>
                     </div>
                 </div>
             </div>
