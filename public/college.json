@@ -1,5 +1,6 @@
 [
     {
+        "id": 1,
         "image": "https://i.ibb.co.com/d72QFS0/american.jpg",
         "name": "Pomona College",
         "admission_dates": "November 15, 2024 to Mid-December 2024",
@@ -21,6 +22,7 @@
         ]
     },
     {
+        "id": 2,
         "image": "https://i.ibb.co.com/rmpm72r/nottr.jpg",
         "name": "Notre Dame College, Dhaka",
         "admission_dates": "May 25, 2024, to May 30, 2024",
@@ -42,6 +44,7 @@
         ]
     },
     {
+        "id": 3,
         "image": "https://i.ibb.co.com/MRMnMSB/uttara.jpg",
         "name": "rajuk uttara model college",
         "admission_dates": "May 5, 2025​",

@@ -9,7 +9,7 @@ function App() {
 
   return (
     <div>
-      <div className='h-screen'>
+      <div className=''>
         <MainLayout>
           <Outlet></Outlet>
         </MainLayout>

@@ -1,12 +1,15 @@
 
 
-const SingleCoCard = () => {
+const SingleCoCard = ({ singleData }) => {
+    const { image, name, admission_dates, events, research_history, sports } = singleData || {};
     return (
         <div>
-            <div className="card glass w-96">
+            <div className="card glass">
                 <figure>
                     <img
-                        src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
+                        className="w-full h-[320px] object-cover"
+
+                        src={image}
                         alt="car!" />
                 </figure>
                 <div className="card-body">
