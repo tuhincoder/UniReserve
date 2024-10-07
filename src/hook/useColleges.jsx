@@ -4,14 +4,14 @@ import useAxiosPublic from "./useAxiosPublic";
 
 const useColleges = () => {
     const axiosPublic = useAxiosPublic()
-    const { data: colleges = [] } = useQuery({
+    const { data: colleges = [], isLoading } = useQuery({
         queryKey: ['anotherColleges'],
         queryFn: async () => {
             const res = await axiosPublic.get('/allColleges')
             return res.data;
         }
     })
-    return [colleges]
+    return [colleges, isLoading]
 };
 
 export default useColleges;

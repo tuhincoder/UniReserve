@@ -1,15 +1,17 @@
 import { useQuery } from "@tanstack/react-query";
 import useAxiosPublic from "../../hook/useAxiosPublic";
 import FormCart from "./FormCart";
+import useAuth from "../../hook/useAuth";
+import Loading from "../../component/common/Loading";
 
 
 const MyCollage = () => {
-
+    const { user } = useAuth()
     const axiosPublic = useAxiosPublic()
     const { data: form = [], isLoading } = useQuery({
-        queryKey: ['formData',],
+        queryKey: ['formData', user?.email],
         queryFn: async () => {
-            const res = await axiosPublic.get('/form')
+            const res = await axiosPublic.get(`/form?email=${user.email}`)
             return res.data
         }
     })
@@ -17,7 +19,8 @@ const MyCollage = () => {
 
 
     if (isLoading) {
-        return <p>Loading</p>
+        return <Loading />
+
     }
     return (
         <div>

@@ -1,6 +1,7 @@
 /* eslint-disable react/prop-types */
 import { Navigate, useLocation } from "react-router-dom";
 import useAuth from "../hook/useAuth";
+import Loading from "../component/common/Loading";
 
 
 const PrivetRout = ({ children }) => {
@@ -9,7 +10,7 @@ const PrivetRout = ({ children }) => {
 
 
     if (loading) {
-        return <p>Loading...</p>
+        return <Loading />
     }
     if (user) {
         return children

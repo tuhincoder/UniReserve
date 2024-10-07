@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import { GoArrowUpRight } from "react-icons/go";
 import { Link } from "react-router-dom";
 const SingleCoCard = ({ singleData }) => {
@@ -35,10 +36,10 @@ const SingleCoCard = ({ singleData }) => {
 
                     </div>
                     <p>{research_history.length > 0 && research_history.slice(0, 100)}....</p>
-                    <div className="card-actions justify-end">
-                        <button className="btn">
+                    <div className="card-actions justify-start rounded<MyCollage />">
+                        <button className="border px-5 py-2">
                             <Link to={`/clgDetails/${_id}`}>
-                                <GoArrowUpRight className="text-2xl font-bold animate-pulse" />
+                                <GoArrowUpRight className="text-4xl font-bold animate-pulse" />
                             </Link>
                         </button>
                     </div>

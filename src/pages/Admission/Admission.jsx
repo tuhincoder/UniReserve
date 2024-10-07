@@ -2,12 +2,15 @@ import { LuArrowUpRight } from "react-icons/lu";
 import Container from "../../component/common/Container";
 import useColleges from "../../hook/useColleges";
 import { Link } from "react-router-dom";
+import Loading from "../../component/common/Loading";
 
 const Admission = () => {
-    const [colleges] = useColleges()
-    console.log(colleges);
+    const [colleges, isLoading] = useColleges()
+    // console.log(colleges);
 
-    // style
+    if (isLoading) {
+        return <Loading />
+    }
 
 
     return (

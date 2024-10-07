@@ -1,4 +1,4 @@
-import { useLoaderData, useParams } from "react-router-dom";
+import { useLoaderData } from "react-router-dom";
 
 
 const CollegeCardDetails = () => {
@@ -6,7 +6,8 @@ const CollegeCardDetails = () => {
     // console.log(sports_categories);
     return (
         <div className="my-20">
-            <div className="hero bg-base-200 min-h-screen">
+            <h1 className="text-center text-4xl font-serif">College Details</h1>
+            <div className="hero bg-base-100 min-h-screen">
                 <div className="hero-content flex-col lg:flex-row">
                     <img
                         src={image}
@@ -25,7 +26,7 @@ const CollegeCardDetails = () => {
                         <p className="">
                             <span className="font-medium">Sports Categories:</span>  {sports_categories}
                         </p>
-                        <button className="btn btn-primary">Get Started</button>
+                        <button className="ml-10 rounded border px-10 py-3 bg-slate-300 text-xl">More...</button>
                     </div>
                 </div>
             </div>
