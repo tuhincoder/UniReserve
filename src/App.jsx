@@ -9,11 +9,13 @@ function App() {
 
   return (
     <div>
-      <div className=''>
-        <MainLayout>
+
+      <MainLayout>
+        <div className='min-h-screen'>
           <Outlet></Outlet>
-        </MainLayout>
-      </div>
+        </div>
+      </MainLayout>
+
       <Footer></Footer>
     </div>
   )

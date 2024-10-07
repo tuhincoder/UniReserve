@@ -1,0 +1,142 @@
+[
+    {
+        "_id": 1,
+        "image": "https://i.ibb.co.com/d72QFS0/american.jpg",
+        "name": "Pomona College",
+        "admission_dates": "11, 15, 2024 to 12 2024",
+        "admission_process": "Prospective students are required to complete an online application, submit academic transcripts, letters of recommendation, and standardized test scores (if applicable). Pomona College practices holistic admissions, considering both academic achievements and extracurricular involvement. Interviews are recommended but not mandatory.",
+        "events": [
+            {
+                "event1": "Claremont Colleges ",
+                "event2": "Public Lectures ",
+                "event3": "Cultural Festivals"
+            }
+        ],
+        "event_details": "Academic, cultural, and public engagement events encouraging participation from students and faculty.",
+        "location": "Claremont, California.",
+        "research_history": "Pomona College, founded in 1887, emphasizes undergraduate research across diverse fields, encouraging collaboration between students and faculty. Programs like the Summer Undergraduate Research Program (SURP) foster hands-on experiences in STEM, humanities, and social sciences.",
+        "research_works": "Undergraduate research programs, collaboration between students and faculty, interdisciplinary projects, and summer research opportunities.",
+        "number_of_research": 20,
+        "sports": [
+            {
+                "sports1": "Varsity Sports",
+                "sports2": "Athletic Facilities",
+                "sports3": "Philosophy of Sports"
+            }
+        ],
+        "sports_categories": "Varsity sports, intramural sports, and recreational activities.",
+        "rating": 4.8
+    },
+    {
+        "_id": 2,
+        "image": "https://i.ibb.co.com/rmpm72r/nottr.jpg",
+        "name": "Notre Dame College",
+        "admission_dates": "5, 25, 2024, to 5 30, 2024",
+        "admission_process": "Applicants must submit their academic records, fill out an application form available on the college’s website, and participate in entrance exams for certain courses. The college also evaluates applicants based on their participation in extracurricular activities and community service.",
+        "events": [
+            {
+                "event1": "7th National Adventure",
+                "event2": "World Environment",
+                "event3": "Lensation Photography"
+            }
+        ],
+        "event_details": "Outdoor activities, environmental awareness, and creative competitions.",
+        "location": "Dhaka, Bangladesh",
+        "research_history": "Notre Dame College, founded in 1949, integrates research into its academic framework, emphasizing quality education and social responsibility. Faculty and students engage in community-focused research, promoting critical thinking and addressing local issues.",
+        "research_works": "Community-focused research, social justice-driven projects, and interdisciplinary collaboration between students and faculty.",
+        "number_of_research": 15,
+        "sports": [
+            {
+                "sports1": "Diverse Sports",
+                "sports2": "Annual Sports",
+                "sports3": "Focus on Holistic"
+            }
+        ],
+        "sports_categories": "Cricket, football, basketball, and track & field events.",
+        "rating": 3.9
+    },
+    {
+        "_id": 3,
+        "image": "https://i.ibb.co.com/MRMnMSB/uttara.jpg",
+        "name": "Rajuk Uttara Model College",
+        "admission_dates": "May 5, 2025​",
+        "admission_process": "The admission process includes an online application, followed by an entrance examination. Successful candidates are selected based on academic performance, entrance exam scores, and participation in extracurricular activities.",
+        "events": [
+            {
+                "event1": "Rajuk National",
+                "event2": "RCCC Intra Cultural",
+                "event3": "Sports Day"
+            }
+        ],
+        "event_details": "Academic competitions, cultural performances, and sports events.",
+        "location": "Dhaka, Bangladesh",
+        "research_history": "Rajuk Uttara Model College, founded in 1994, fosters a strong research culture, encouraging both students and faculty to engage in meaningful projects. Through workshops and collaborative initiatives, the college promotes critical thinking and practical applications of research.",
+        "research_works": "Workshops, collaborative research projects, and student-led initiatives focusing on local and national issues.",
+        "number_of_research": 10,
+        "sports": [
+            {
+                "sports1": "Diverse Sports",
+                "sports2": "Annual Sports",
+                "sports3": "Training"
+            }
+        ],
+        "sports_categories": "Cricket, football, badminton, volleyball, and athletics.",
+        "rating": 4.5
+    },
+    {
+        "_id": 4,
+        "image": "https://i.ibb.co.com/hYRyH8b/dhakaCo.png",
+        "name": "Dhaka College",
+        "admission_dates": "February 4,2025",
+        "admission_process": "The admission process requires an online application, submission of academic transcripts, and an entrance exam. Extracurricular activities and volunteer work are also considered during the evaluation.",
+        "events": [
+            {
+                "event1": "Science Fair",
+                "event2": "Inter-college Debate",
+                "event3": "Cultural Day"
+            }
+        ],
+        "event_details": "Educational and cultural events involving student participation and faculty guidance.",
+        "location": "Santa Maria, California",
+        "research_history": "Santa Maria College has a growing research culture, with a focus on sustainability and social sciences. Students work closely with faculty on community-based projects.",
+        "research_works": "Sustainability-focused research, social sciences projects, and faculty-student collaborations.",
+        "number_of_research": 12,
+        "sports": [
+            {
+                "sports1": "Football",
+                "sports2": "Basketball",
+                "sports3": "Tennis"
+            }
+        ],
+        "sports_categories": "Football, basketball, tennis, and track events.",
+        "rating": 4.1
+    },
+    {
+        "_id": 5,
+        "image": "https://i.ibb.co.com/Xkd9Y6Y/adom.jpg",
+        "name": "Adamjee Cantonment College",
+        "admission_dates": "May 26, 2025",
+        "admission_process": "Eagle High requires applicants to complete an online form and provide academic transcripts. An interview and entrance exam are also part of the process.",
+        "events": [
+            {
+                "event1": "Science Expo",
+                "event2": "Athletics Day",
+                "event3": "Art & Craft Exhibition"
+            }
+        ],
+        "event_details": "Student-led events promoting creativity and innovation.",
+        "location": "Seattle, Washington",
+        "research_history": "Eagle High encourages scientific research and innovation among students through annual science fairs and research workshops.",
+        "research_works": "Student-led science projects, innovation workshops, and research fairs.",
+        "number_of_research": 8,
+        "sports": [
+            {
+                "sports1": "Track and Field",
+                "sports2": "Football",
+                "sports3": "Swimming"
+            }
+        ],
+        "sports_categories": "Track and field, football, swimming, and basketball.",
+        "rating": 3.0
+    }
+]

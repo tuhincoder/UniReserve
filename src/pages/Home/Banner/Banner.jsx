@@ -6,6 +6,7 @@ import banner3 from '../../../assets/banner/banner2.jpg'
 
 const Banner = () => {
     return (
+
         <div>
 
             <div className="carousel w-full h-[500px]">
