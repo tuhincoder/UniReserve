@@ -1,8 +1,8 @@
-
-
+import { GoArrowUpRight } from "react-icons/go";
+import { Link } from "react-router-dom";
 const SingleCoCard = ({ singleData }) => {
-    const { image, name, admission_dates, events, research_history, sports } = singleData || {};
-    console.log(sports[0]);
+    const { image, name, admission_dates, events, research_history, sports, _id } = singleData || {};
+
     return (
         <div>
             <div className="card glass">
@@ -36,7 +36,11 @@ const SingleCoCard = ({ singleData }) => {
                     </div>
                     <p>{research_history.length > 0 && research_history.slice(0, 100)}....</p>
                     <div className="card-actions justify-end">
-                        <button className="btn btn-primary"></button>
+                        <button className="btn">
+                            <Link to={`/clgDetails/${_id}`}>
+                                <GoArrowUpRight className="text-2xl font-bold animate-pulse" />
+                            </Link>
+                        </button>
                     </div>
                 </div>
             </div>

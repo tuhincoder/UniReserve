@@ -1,9 +1,9 @@
 [
     {
-        "id": 1,
         "image": "https://i.ibb.co.com/d72QFS0/american.jpg",
         "name": "Pomona College",
         "admission_dates": "11, 15, 2024 to 12 2024",
+        "admission_process": "Prospective students are required to complete an online application, submit academic transcripts, letters of recommendation, and standardized test scores (if applicable). Pomona College practices holistic admissions, considering both academic achievements and extracurricular involvement. Interviews are recommended but not mandatory.",
         "events": [
             {
                 "event1": "Claremont Colleges ",
@@ -11,21 +11,24 @@
                 "event3": "Cultural Festivals"
             }
         ],
+        "event_details": "Academic, cultural, and public engagement events encouraging participation from students and faculty.",
         "location": "Claremont, California.",
         "research_history": "Pomona College, founded in 1887, emphasizes undergraduate research across diverse fields, encouraging collaboration between students and faculty. Programs like the Summer Undergraduate Research Program (SURP) foster hands-on experiences in STEM, humanities, and social sciences. This commitment to research cultivates critical thinking and prepares students for advanced study and professional careers",
+        "research_works": "Undergraduate research programs, collaboration between students and faculty, interdisciplinary projects, and summer research opportunities.",
         "sports": [
             {
                 "sports1": "Varsity Sports",
                 "sports2": "Athletic Facilities",
                 "sports3": "Philosophy of Sports"
             }
-        ]
+        ],
+        "sports_categories": "Varsity sports, intramural sports, and recreational activities."
     },
     {
-        "id": 2,
         "image": "https://i.ibb.co.com/rmpm72r/nottr.jpg",
         "name": "Notre Dame College",
         "admission_dates": "5, 25, 2024, to 5 30, 2024",
+        "admission_process": "Applicants must submit their academic records, fill out an application form available on the college’s website, and participate in entrance exams for certain courses. The college also evaluates applicants based on their participation in extracurricular activities and community service.",
         "events": [
             {
                 "event1": "7th National Adventure  ",
@@ -33,21 +36,24 @@
                 "event3": "Lensation Photography "
             }
         ],
+        "event_details": "Outdoor activities, environmental awareness, and creative competitions.",
         "location": "Dhaka, Bangladesh",
         "research_history": "Notre Dame College, founded in 1949, integrates research into its academic framework, emphasizing quality education and social responsibility. Faculty and students engage in community-focused research, promoting critical thinking and addressing local issues. The college’s commitment to social justice further shapes its research initiatives and educational objectives​(Happening Next)​(NDC Website).",
+        "research_works": "Community-focused research, social justice-driven projects, and interdisciplinary collaboration between students and faculty.",
         "sports": [
             {
                 "sports1": "Diverse Sports",
                 "sports2": "Annual Sports ",
                 "sports3": "Focus on Holistic "
             }
-        ]
+        ],
+        "sports_categories": "Cricket, football, basketball, and track & field events."
     },
     {
-        "id": 3,
         "image": "https://i.ibb.co.com/MRMnMSB/uttara.jpg",
         "name": "rajuk uttara model college",
         "admission_dates": "May 5, 2025​",
+        "admission_process": "The admission process includes an online application, followed by an entrance examination. Successful candidates are selected based on academic performance, entrance exam scores, and participation in extracurricular activities.",
         "events": [
             {
                 "event1": "Rajuk National ",
@@ -55,14 +61,17 @@
                 "event3": "Sports Day"
             }
         ],
+        "event_details": "Academic competitions, cultural performances, and sports events.",
         "location": "Dhaka, Bangladesh",
         "research_history": "Rajuk Uttara Model College, founded in 1994, fosters a strong research culture, encouraging both students and faculty to engage in meaningful projects. Through workshops and collaborative initiatives, the college promotes critical thinking and practical applications of research, enhancing the academic experience and addressing local and national issues​(AllEvents.in)​(Happening Next). For more details, visit the college's official website.",
+        "research_works": "Workshops, collaborative research projects, and student-led initiatives focusing on local and national issues.",
         "sports": [
             {
                 "sports1": "Diverse Sports ",
                 "sports2": "Annual Sports ",
                 "sports3": "Training  "
             }
-        ]
+        ],
+        "sports_categories": "Cricket, football, badminton, volleyball, and athletics."
     }
 ]
