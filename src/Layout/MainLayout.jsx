@@ -3,9 +3,10 @@ import { Link, NavLink, useNavigate } from "react-router-dom";
 import navLogo from '../assets/images/navLogo.jpg'
 import useAuth from "../hook/useAuth";
 import Navbar from "../component/utils/Shared/Navbar/Navbar";
+import profileImg from '../assets/images/profile.jpg'
 
 const MainLayout = ({ children }) => {
-    const { user, LogOutUser, loginUser } = useAuth()
+    const { user, LogOutUser } = useAuth()
     const navigate = useNavigate()
     const handleLogout = () => {
         console.log('logout');
@@ -55,15 +56,15 @@ const MainLayout = ({ children }) => {
                             <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
                                 <div className="w-10 rounded-full">
                                     <img
-                                        alt="Tailwind CSS Navbar component"
-                                        src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
+                                        alt=""
+                                        src={user?.photoURL ? user?.photoURL : profileImg} />
                                 </div>
                             </div>
                             <ul
                                 tabIndex={0}
                                 className="menu menu-sm dropdown-content bg-slate-800 text-white text-xl rounded-box z-[1] mt-3 w-52 py-5 shadow">
                                 <li>
-
+                                    <p>{user?.displayName}</p>
                                 </li>
                                 {user?.email ? <button onClick={handleLogout}>Logout</button> :
                                     <button onClick={handleLogin}>Login</button>}

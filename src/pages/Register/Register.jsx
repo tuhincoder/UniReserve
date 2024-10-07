@@ -1,19 +1,27 @@
+import toast from "react-hot-toast";
 import useAuth from "../../hook/useAuth";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 
 const Register = () => {
     const { createUser } = useAuth()
+    const navigate = useNavigate()
+    const location = useLocation()
 
+    let from = location.state?.from?.pathname || "/";
 
     const handleRegister = e => {
         e.preventDefault()
         const form = e.target;
         const email = form.email.value;
         const password = form.password.value;
-        console.log(email, password);
+        // console.log(email, password);
+        const toastId = toast.loading('Registering...')
         createUser(email, password)
             .then(result => {
                 const user = result.user;
+                toast.success('Register successfully', { id: toastId })
                 console.log(user);
+                navigate(from, { replace: true });
             })
             .catch(error => {
                 console.log(error);
@@ -56,9 +64,11 @@ const Register = () => {
                     {/* Right side content */}
                     <div className="w-full sm:w-1/2">
                         <p className="mb-6 text-sm">If you  already have an account click the button below to login now.</p>
-                        <button className="mb-2 inline-flex h-10 w-full items-center justify-center rounded-md bg-zinc-800 px-4 py-2 text-sm font-medium uppercase text-white hover:bg-zinc-700">
-                            Login now
-                        </button>
+                        <Link to={'/login'}>
+                            <button className="mb-2 inline-flex h-10 w-full items-center justify-center rounded-md bg-zinc-800 px-4 py-2 text-sm font-medium uppercase text-white hover:bg-zinc-700">
+                                Login now
+                            </button>
+                        </Link>
                         <p className="my-4 text-center">OR</p>
                         <button className="mb-2 flex h-10 w-full items-center justify-center gap-1 rounded-md bg-blue-600 px-4 py-2 text-sm font-medium text-white">
                             <svg

@@ -11,6 +11,7 @@ import CollegesDetails from "../pages/Collages/CollegesDetails";
 import AdmissionForm from "../pages/Admission/AdmissionForm";
 import Login from "../pages/Login/Login";
 import Register from "../pages/Register/Register";
+import PrivetRout from "./PrivetRout";
 
 
 const router = createBrowserRouter([
@@ -20,7 +21,7 @@ const router = createBrowserRouter([
         errorElement: <ErrorPage />,
         children: [
             {
-                path: 'home',
+                path: '',
                 element: <Home />
             },
             {
@@ -57,7 +58,9 @@ const router = createBrowserRouter([
             },
             {
                 path: 'myCollage',
-                element: <MyCollage />
+                element: <PrivetRout>
+                    <MyCollage />
+                </PrivetRout>
             },
 
         ]
