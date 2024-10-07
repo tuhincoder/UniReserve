@@ -1,19 +1,21 @@
-import { useQuery } from "@tanstack/react-query";
-import useAxiosPublic from "../../hook/useAxiosPublic";
+// import { useQuery } from "@tanstack/react-query";
+// import useAxiosPublic from "../../hook/useAxiosPublic";
 import CollegesCard from "./CollegesCard";
-import { useEffect, useState } from "react";
+// import { useEffect, useState } from "react";
 import Container from "../../component/common/Container";
+import useColleges from "../../hook/useColleges";
 
 const Collages = () => {
-    const axiosPublic = useAxiosPublic()
+    const [colleges] = useColleges()
+    // const axiosPublic = useAxiosPublic()
     // const [colleges, setColleges] = useState([])
-    const { data: colleges = [] } = useQuery({
-        queryKey: ['anotherColleges'],
-        queryFn: async () => {
-            const res = await axiosPublic.get('/allColleges')
-            return res.data;
-        }
-    })
+    // const { data: colleges = [] } = useQuery({
+    //     queryKey: ['anotherColleges'],
+    //     queryFn: async () => {
+    //         const res = await axiosPublic.get('/allColleges')
+    //         return res.data;
+    //     }
+    // })
 
     // useEffect(() => {
     //     fetch('anotherCollege.json')

@@ -1,0 +1,9 @@
+#hover-bg {
+    background-image: url('');
+    background-size: cover;
+    transition: background-image 0.3s ease;
+}
+
+#hover-bg:hover {
+    background-image: url('');
+}
