@@ -1,8 +1,25 @@
 /* eslint-disable react/prop-types */
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 import navLogo from '../assets/images/navLogo.jpg'
+import useAuth from "../hook/useAuth";
+import Navbar from "../component/utils/Shared/Navbar/Navbar";
 
 const MainLayout = ({ children }) => {
+    const { user, LogOutUser, loginUser } = useAuth()
+    const navigate = useNavigate()
+    const handleLogout = () => {
+        console.log('logout');
+        LogOutUser()
+            .then(() => { })
+            .catch(error => console.log(error.message))
+
+    }
+
+    const handleLogin = () => {
+        navigate('/login')
+
+    }
+
     return (
         <div>
 
@@ -31,14 +48,26 @@ const MainLayout = ({ children }) => {
                             src={navLogo} alt="" />
                         <div className="mx-2 flex-1 px-1 text-xl font-medium">Unis <span className="text-[#B8001F] ">Reserve</span></div>
                         <div className="hidden flex-none lg:block">
-                            <div className=" space-x-5 gap-5 text-xl">
-                                {/* <NavLink to={'/home'}>Home</NavLink> */}
-                                <NavLink to="/home" className={({ isActive }) => isActive ? 'text-[#890c25] underline underline-offset-2' : ''}>Home</NavLink>
-                                <NavLink to="/collage" className={({ isActive }) => isActive ? 'text-[#890c25] underline underline-offset-2' : ''}>Collages</NavLink>
-                                <NavLink to="/Admission" className={({ isActive }) => isActive ? 'text-[#890c25] underline underline-offset-2' : ''}>Admission</NavLink>
-                                <NavLink to="/myCollage" className={({ isActive }) => isActive ? 'text-[#890c25] underline underline-offset-2' : ''}>My Collage</NavLink>
-
+                            <Navbar />
+                        </div>
+                        {/* dropdown */}
+                        <div className="dropdown dropdown-end ml-10">
+                            <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
+                                <div className="w-10 rounded-full">
+                                    <img
+                                        alt="Tailwind CSS Navbar component"
+                                        src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
+                                </div>
                             </div>
+                            <ul
+                                tabIndex={0}
+                                className="menu menu-sm dropdown-content bg-slate-800 text-white text-xl rounded-box z-[1] mt-3 w-52 py-5 shadow">
+                                <li>
+
+                                </li>
+                                {user?.email ? <button onClick={handleLogout}>Logout</button> :
+                                    <button onClick={handleLogin}>Login</button>}
+                            </ul>
                         </div>
                     </div>
                     {/* Page content here */}

@@ -9,6 +9,8 @@ import CollegeCardDetails from "../pages/Home/CollageCard/CollegeCardDetails";
 import ResearchMore from "../pages/Home/Research/ResearchMore";
 import CollegesDetails from "../pages/Collages/CollegesDetails";
 import AdmissionForm from "../pages/Admission/AdmissionForm";
+import Login from "../pages/Login/Login";
+import Register from "../pages/Register/Register";
 
 
 const router = createBrowserRouter([
@@ -60,7 +62,15 @@ const router = createBrowserRouter([
 
         ]
 
-    }
+    },
+    {
+        path: '/login',
+        element: <Login />
+    },
+    {
+        path: '/register',
+        element: <Register />
+    },
 ])
 
 export default router;
