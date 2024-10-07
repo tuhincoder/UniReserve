@@ -6,23 +6,23 @@ import Container from "../../component/common/Container";
 
 const Collages = () => {
     const axiosPublic = useAxiosPublic()
-    const [colleges, setColleges] = useState([])
-    // const { data: colleges = [] } = useQuery({
-    //     queryKey: ['anotherColleges'],
-    //     queryFn: async () => {
-    //         const res = await axiosPublic.get('anotherCollege.json')
-    //         return res.data;
-    //     }
-    // })
+    // const [colleges, setColleges] = useState([])
+    const { data: colleges = [] } = useQuery({
+        queryKey: ['anotherColleges'],
+        queryFn: async () => {
+            const res = await axiosPublic.get('/allColleges')
+            return res.data;
+        }
+    })
 
-    useEffect(() => {
-        fetch('anotherCollege.json')
-            .then(res => res.json())
-            .then(data => {
-                console.log(data);
-                setColleges(data)
-            })
-    }, [])
+    // useEffect(() => {
+    //     fetch('anotherCollege.json')
+    //         .then(res => res.json())
+    //         .then(data => {
+    //             console.log(data);
+    //             setColleges(data)
+    //         })
+    // }, [])
 
     return (
         <Container>

@@ -1,10 +1,10 @@
 [
     {
-        "_id": 1,
         "image": "https://i.ibb.co.com/d72QFS0/american.jpg",
         "name": "Pomona College",
         "admission_dates": "11, 15, 2024 to 12 2024",
         "admission_process": "Prospective students are required to complete an online application, submit academic transcripts, letters of recommendation, and standardized test scores (if applicable). Pomona College practices holistic admissions, considering both academic achievements and extracurricular involvement. Interviews are recommended but not mandatory.",
+        "coast": "30",
         "events": [
             {
                 "event1": "Claremont Colleges ",
@@ -28,8 +28,8 @@
         "rating": 4.8
     },
     {
-        "_id": 2,
         "image": "https://i.ibb.co.com/rmpm72r/nottr.jpg",
+        "coast": "50",
         "name": "Notre Dame College",
         "admission_dates": "5, 25, 2024, to 5 30, 2024",
         "admission_process": "Applicants must submit their academic records, fill out an application form available on the college’s website, and participate in entrance exams for certain courses. The college also evaluates applicants based on their participation in extracurricular activities and community service.",
@@ -56,8 +56,8 @@
         "rating": 3.9
     },
     {
-        "_id": 3,
         "image": "https://i.ibb.co.com/MRMnMSB/uttara.jpg",
+        "coast": "70",
         "name": "Rajuk Uttara Model College",
         "admission_dates": "May 5, 2025​",
         "admission_process": "The admission process includes an online application, followed by an entrance examination. Successful candidates are selected based on academic performance, entrance exam scores, and participation in extracurricular activities.",
@@ -84,8 +84,8 @@
         "rating": 4.5
     },
     {
-        "_id": 4,
         "image": "https://i.ibb.co.com/hYRyH8b/dhakaCo.png",
+        "coast": "400",
         "name": "Dhaka College",
         "admission_dates": "February 4,2025",
         "admission_process": "The admission process requires an online application, submission of academic transcripts, and an entrance exam. Extracurricular activities and volunteer work are also considered during the evaluation.",
@@ -112,8 +112,8 @@
         "rating": 4.1
     },
     {
-        "_id": 5,
         "image": "https://i.ibb.co.com/Xkd9Y6Y/adom.jpg",
+        "coast": "35",
         "name": "Adamjee Cantonment College",
         "admission_dates": "May 26, 2025",
         "admission_process": "Eagle High requires applicants to complete an online form and provide academic transcripts. An interview and entrance exam are also part of the process.",

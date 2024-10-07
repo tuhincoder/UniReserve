@@ -7,6 +7,7 @@ import Admission from "../pages/Admission/Admission";
 import MyCollage from "../pages/MyCollage/MyCollage";
 import CollegeCardDetails from "../pages/Home/CollageCard/CollegeCardDetails";
 import ResearchMore from "../pages/Home/Research/ResearchMore";
+import CollegesDetails from "../pages/Collages/CollegesDetails";
 
 
 const router = createBrowserRouter([
@@ -22,6 +23,12 @@ const router = createBrowserRouter([
             {
                 path: 'collage',
                 element: <Collages />
+            },
+            {
+                path: 'collages/:id',
+                element: <CollegesDetails />,
+                loader: ({ params }) => fetch(`http://localhost:5000/allColleges/${params.id}`)
+
             },
             // college card details
             {
