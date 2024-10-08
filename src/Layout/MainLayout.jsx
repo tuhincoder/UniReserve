@@ -66,7 +66,7 @@ const MainLayout = ({ children }) => {
                                 <li>
                                     <p>{user?.displayName}</p>
                                 </li>
-                                {user?.email ? <button onClick={handleLogout}>Logout</button> :
+                                {user ? <button onClick={handleLogout}>Logout</button> :
                                     <button onClick={handleLogin}>Login</button>}
                             </ul>
                         </div>

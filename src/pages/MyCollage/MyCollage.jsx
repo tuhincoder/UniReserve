@@ -11,7 +11,7 @@ const MyCollage = () => {
     const { data: form = [], isLoading } = useQuery({
         queryKey: ['formData', user?.email],
         queryFn: async () => {
-            const res = await axiosPublic.get(`/form?email=${user.email}`)
+            const res = await axiosPublic.get(`/form?email=${user?.email}`)
             return res.data
         }
     })

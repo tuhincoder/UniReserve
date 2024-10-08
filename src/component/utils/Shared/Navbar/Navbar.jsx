@@ -18,7 +18,7 @@ const Navbar = () => {
             <NavLink to="/collage" className={({ isActive }) => isActive ? 'text-[#890c25] underline underline-offset-2' : ''}>Collages</NavLink>
             <NavLink to="/Admission" className={({ isActive }) => isActive ? 'text-[#890c25] underline underline-offset-2' : ''}>Admission</NavLink>
             <NavLink to="/myCollage" className={({ isActive }) => isActive ? 'text-[#890c25] underline underline-offset-2' : ''}>My Collage</NavLink>
-            {user?.email ?
+            {user ?
                 <Link className={({ isActive }) => isActive ? 'text-[#890c25] underline underline-offset-2' : ''}>
                     <button onClick={handleLogOut}>Logout</button>
                 </Link> :

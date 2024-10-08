@@ -31,21 +31,21 @@ const router = createBrowserRouter([
             {
                 path: 'collages/:id',
                 element: <CollegesDetails />,
-                loader: ({ params }) => fetch(`http://localhost:5000/allColleges/${params.id}`)
+                loader: ({ params }) => fetch(`https://unireserve-server.vercel.app/allColleges/${params.id}`)
 
             },
             // college card details
             {
                 path: '/clgDetails/:id',
                 element: <CollegeCardDetails />,
-                loader: ({ params }) => fetch(`http://localhost:5000/read-college/${params.id}`)
+                loader: ({ params }) => fetch(`https://unireserve-server.vercel.app/read-college/${params.id}`)
             },
             // research
 
             {
                 path: 'researchMore/:id',
                 element: <ResearchMore />,
-                loader: ({ params }) => fetch(`http://localhost:5000/research/${params.id}`)
+                loader: ({ params }) => fetch(`https://unireserve-server.vercel.app/research/${params.id}`)
             },
             {
                 path: 'admission',
@@ -54,7 +54,7 @@ const router = createBrowserRouter([
             {
                 path: 'admissionForm/:id',
                 element: <AdmissionForm />,
-                loader: ({ params }) => fetch(`http://localhost:5000/allColleges/${params.id}`)
+                loader: ({ params }) => fetch(`https://unireserve-server.vercel.app/allColleges/${params.id}`)
             },
             {
                 path: 'myCollage',
