@@ -4,6 +4,7 @@ import navLogo from '../assets/images/navLogo.jpg'
 import useAuth from "../hook/useAuth";
 import Navbar from "../component/utils/Shared/Navbar/Navbar";
 import profileImg from '../assets/images/profile.jpg'
+import SidBar from "../component/utils/Shared/Navbar/SidBar";
 
 const MainLayout = ({ children }) => {
     const { user, LogOutUser } = useAuth()
@@ -24,11 +25,11 @@ const MainLayout = ({ children }) => {
     return (
         <div>
 
-            <div className="drawer ">
+            <div className="drawer">
                 <input id="my-drawer-3" type="checkbox" className="drawer-toggle" />
-                <div className="drawer-content flex flex-col">
+                <div className="drawer-content flex flex-col ">
                     {/* Navbar */}
-                    <div className="navbar bg-white w-full border-b-2 md:px-10 py-6">
+                    <div className="navbar bg-white w-full border-b-2 md:px-10 py-6 ">
                         <div className="flex-none lg:hidden">
                             <label htmlFor="my-drawer-3" aria-label="open sidebar" className="btn btn-square btn-ghost">
                                 <svg
@@ -45,7 +46,7 @@ const MainLayout = ({ children }) => {
                             </label>
                         </div>
                         <img
-                            className="w-12 h-12 rounded-3xl"
+                            className="w-12 h-12 rounded-3xl hidden lg:block"
                             src={navLogo} alt="" />
                         <div className="mx-2 flex-1 px-1 text-xl font-medium">Unis <span className="text-[#B8001F] ">Reserve</span></div>
                         <div className="hidden flex-none lg:block">
@@ -78,8 +79,7 @@ const MainLayout = ({ children }) => {
                     <label htmlFor="my-drawer-3" aria-label="close sidebar" className="drawer-overlay"></label>
                     <ul className="menu bg-base-200 min-h-full w-80 p-4">
                         {/* Sidebar content here */}
-                        <li><a>Sidebar Item 1</a></li>
-                        <li><a>Sidebar Item 2</a></li>
+                        <SidBar />
                     </ul>
                 </div>
             </div>

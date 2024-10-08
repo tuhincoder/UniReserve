@@ -8,10 +8,10 @@ function App() {
 
 
   return (
-    <div>
+    <div >
 
       <MainLayout>
-        <div className='min-h-screen'>
+        <div className='min-h-screen !scroll-smooth'>
           <Outlet></Outlet>
         </div>
       </MainLayout>

@@ -1,4 +1,4 @@
-import Container from "../../../component/common/Container";
+
 import banner1 from '../../../assets/banner/banner.jpg'
 import banner2 from '../../../assets/banner/banner1.jpg'
 import banner3 from '../../../assets/banner/banner2.jpg'
@@ -15,6 +15,7 @@ const Banner = () => {
                         src={banner3}
 
                         className="w-full object-cover rounded" />
+
                 </div>
                 <div id="item2" className="carousel-item w-full">
                     <img
