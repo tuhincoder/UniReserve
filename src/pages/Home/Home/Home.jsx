@@ -1,3 +1,4 @@
+import Faq from "../../Faq/Faq";
 import Banner from "../Banner/Banner";
 import CollageCard from "../CollageCard/CollageCard";
 import Gallery from "../Gallery/Gallery";
@@ -11,6 +12,7 @@ const Home = () => {
             <CollageCard />
             <Gallery />
             <Research />
+            <Faq />
             <Review />
         </div>
     );

@@ -45,7 +45,6 @@ const Research = () => {
                             ></ResearchData>)
                         }
                     </div>
-
                 </div>
             </div>
         </Container>

@@ -1,5 +1,4 @@
 import { useQuery } from "@tanstack/react-query";
-import { useEffect, useState } from "react";
 import SingleCoCard from "./SingleCoCard";
 import Container from "../../../component/common/Container";
 import useAxiosPublic from "../../../hook/useAxiosPublic";
@@ -23,7 +22,7 @@ const CollageCard = () => {
                 <h2 className="text-2xl md:text-4xl text-gray-500 font-serif text-center mb-3">Another Colleges</h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7">
                     {
-                        collegeUniverse.map(singleData => <SingleCoCard key={singleData.id} singleData={singleData}>
+                        collegeUniverse.map(singleData => <SingleCoCard key={singleData._id} singleData={singleData}>
 
                         </SingleCoCard>)
                     }

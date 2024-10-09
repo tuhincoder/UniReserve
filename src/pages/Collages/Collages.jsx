@@ -14,6 +14,7 @@ const Collages = () => {
     }
 
 
+
     return (
         <Container>
 

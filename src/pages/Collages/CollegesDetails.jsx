@@ -1,15 +1,15 @@
 import { useLoaderData } from "react-router-dom";
 import Container from "../../component/common/Container";
 import { BsArrow90DegRight } from "react-icons/bs";
-import { FaTimes, FaUserTimes } from "react-icons/fa";
-import { FaTimeline } from "react-icons/fa6";
 import { IoTimeOutline } from "react-icons/io5";
+import bgImg from '../../assets/graduate/graduate3.jpg'
 
 const CollegesDetails = () => {
     const { image, events, event_details, coast, admission_dates } = useLoaderData()
     console.log(events[0]);
     return (
         <Container>
+            <h2 className="text-2xl  text-center font-bold font-serif mt-4 ">College Details Event</h2>
             <div className="grid grid-cols-12 gap-4  mb-96 mt-5">
                 <div className="col-span-8 p-3 ">
                     <img
@@ -71,20 +71,19 @@ const CollegesDetails = () => {
                         </div>
 
                     </div>
-                    {/* 1 */}
-                    <div className="bg-gray-300 h-[500px] py-10 rounded hover:bg-[#890c25] duration-700 transition hover:text-white px-5 mt-5 space-y-4">
-                        <h2 className="font-bold text-xl md:text-2xl text-center text-gray-500">Join New Event About Bangladesh History</h2>
+                    {/* 2 */}
+                    <div className="bg-gray-300 h-[500px] py-10 rounded hover:bg-[#890c25] duration-700 transition text-white px-5 mt-5 space-y-10 text-stone-950-800" style={{ backgroundImage: `url(${bgImg}) ` }}>
+                        <h2 className="font-bold text-xl md:text-2xl text-center">Join New Event About Bangladesh History</h2>
                         <h2 className="text-lg md:text-2xl text-center">H.S.C. In Bangladesh Studies</h2>
-                        <div>
-                            <h4 className="font-bold">Date & Time:</h4>
+                        <div className="">
+                            <h4 className="font-bold text-center">Date & Time:</h4>
 
-                            <p className="flex"><IoTimeOutline />10:30 am</p>
+                            <p className="flex items-center justify-center"><IoTimeOutline className="mr-2" />10:30 am</p>
                         </div>
-                        <div>
-                            <h4 className="font-bold">Coast:</h4>
-                            <p className="text-lg">${coast}</p>
+                        <div className="text-center">
+                            <b>Location:</b> Bangladesh
                         </div>
-                        <div>
+                        <div className="text-center">
                             <h4 className="font-bold">Categories:</h4>
                             <a href="" className="underline text-green-700">{events[0].event1}</a>
                             <a href="" className="underline text-green-700 mx-2">{events[0].event2}</a>
