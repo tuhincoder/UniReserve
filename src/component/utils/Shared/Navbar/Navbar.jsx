@@ -12,7 +12,7 @@ const Navbar = () => {
     }
 
     return (
-        <div className=" space-x-5 gap-5 text-xl">
+        <div className=" space-x-5 gap-5 text-xl ">
             {/* <NavLink to={'/home'}>Home</NavLink> */}
             <NavLink to="/" className={({ isActive }) => isActive ? 'text-[#890c25] underline underline-offset-2' : ''}>Home</NavLink>
             <NavLink to="/collage" className={({ isActive }) => isActive ? 'text-[#890c25] underline underline-offset-2' : ''}>Collages</NavLink>

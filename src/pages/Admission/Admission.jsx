@@ -16,9 +16,10 @@ const Admission = () => {
     return (
         <div >
             <Container>
+                <h1 className="text-center text-xl md:text-4xl font-serif mt-5">Admission Now Quickly</h1>
                 <div className="flex flex-col lg:flex-row my-10">
                     <div className="flex-1  px-5">
-                        <h2 className="text-3xl uppercase text-gray-500">Admission</h2>
+                        <h2 className=" text-xl md:text-3xl uppercase text-gray-500 mb-3">Admission Process</h2>
                         <p className="text-gray-500">College Admission Details
                             The college admission process allows students to easily apply to their preferred colleges through a user-friendly online system. The admission period typically begins after the SSC results are announced, with specific application start and deadline dates provided for each college. Applicants are required to provide their full name, subject of interest, email, phone number, address, date of birth, and upload a recent photograph during the application process.
                             <br />
@@ -56,55 +57,55 @@ const Admission = () => {
                         {/* -------- */}
                         <div className="space-y-3">
                             {/* 1 */}
-                            <div className="border px-4 py-8 flex items-center justify-between hover:bg-[#001F3F] hover:text-white duration-1000 transition bg-gray-300 rounded " id="hover-bg">
-                                <div className="w-3/4">
-                                    <h1 className="text-2xl  font-medium hover:text-[#890c25] cursor-pointer">{colleges[0].name}</h1>
-                                    <p className="">{colleges[0].admission_process}</p>
-                                </div>
-                                <Link to={`/admissionForm/${colleges[0]._id}`}>
+                            <Link to={`/admissionForm/${colleges[0]._id}`}>
+                                <div className="border px-4 py-8 flex items-center justify-between hover:bg-[#001F3F] hover:text-white duration-1000 transition bg-gray-300 rounded " id="hover-bg">
+                                    <div className="w-3/4">
+                                        <h1 className="text-2xl  font-medium hover:text-[#890c25] cursor-pointer">{colleges[0].name}</h1>
+                                        <p className="">{colleges[0].admission_process}</p>
+                                    </div>
                                     <LuArrowUpRight className="text-5xl animate-pulse" />
-                                </Link>
-                            </div>
+                                </div>
+                            </Link>
                             {/* 2 */}
-                            <div className="border px-4 py-8 flex items-center justify-between hover:bg-[#001F3F] hover:text-white duration-1000 transition bg-gray-300 rounded" id="hover-bg">
-                                <div className="w-3/4">
-                                    <h1 className="text-2xl  font-medium hover:text-[#890c25] cursor-pointer">{colleges[1].name}</h1>
-                                    <p className="">{colleges[1].admission_process}</p>
-                                </div>
-                                <Link to={`/admissionForm/${colleges[1]._id}`}>
+                            <Link to={`/admissionForm/${colleges[1]._id}`}>
+                                <div className="border px-4 py-8 flex items-center justify-between hover:bg-[#001F3F] hover:text-white duration-1000 transition bg-gray-300 rounded" id="hover-bg">
+                                    <div className="w-3/4">
+                                        <h1 className="text-2xl  font-medium hover:text-[#890c25] cursor-pointer">{colleges[1].name}</h1>
+                                        <p className="">{colleges[1].admission_process}</p>
+                                    </div>
                                     <LuArrowUpRight className="text-5xl animate-pulse" />
-                                </Link>
-                            </div>
-                            {/* 1 */}
-                            <div className="border px-4 py-8 flex items-center justify-between hover:bg-[#001F3F] hover:text-white duration-1000 transition bg-gray-300 rounded" id="hover-bg">
-                                <div className="w-3/4">
-                                    <h1 className="text-2xl  font-medium hover:text-[#890c25] cursor-pointer">{colleges[2].name}</h1>
-                                    <p className="">{colleges[2].admission_process}</p>
                                 </div>
-                                <Link to={`/admissionForm/${colleges[2]._id}`}>
+                            </Link>
+                            {/* 3 */}
+                            <Link to={`/admissionForm/${colleges[2]._id}`}>
+                                <div className="border px-4 py-8 flex items-center justify-between hover:bg-[#001F3F] hover:text-white duration-1000 transition bg-gray-300 rounded" id="hover-bg">
+                                    <div className="w-3/4">
+                                        <h1 className="text-2xl  font-medium hover:text-[#890c25] cursor-pointer">{colleges[2].name}</h1>
+                                        <p className="">{colleges[2].admission_process}</p>
+                                    </div>
                                     <LuArrowUpRight className="text-5xl animate-pulse" />
-                                </Link>
-                            </div>
-                            {/* 1 */}
-                            <div className="border px-4 py-8 flex items-center justify-between hover:bg-[#001F3F] hover:text-white duration-1000 transition bg-gray-300 rounded" id="hover-bg">
-                                <div className="w-3/4">
-                                    <h1 className="text-2xl  font-medium hover:text-[#890c25] cursor-pointer">{colleges[3].name}</h1>
-                                    <p className="">{colleges[3].admission_process}</p>
                                 </div>
-                                <Link to={`/admissionForm/${colleges[3]._id}`}>
+                            </Link>
+                            {/* 4 */}
+                            <Link to={`/admissionForm/${colleges[3]._id}`}>
+                                <div className="border px-4 py-8 flex items-center justify-between hover:bg-[#001F3F] hover:text-white duration-1000 transition bg-gray-300 rounded" id="hover-bg">
+                                    <div className="w-3/4">
+                                        <h1 className="text-2xl  font-medium hover:text-[#890c25] cursor-pointer">{colleges[3].name}</h1>
+                                        <p className="">{colleges[3].admission_process}</p>
+                                    </div>
                                     <LuArrowUpRight className="text-5xl animate-pulse" />
-                                </Link>
-                            </div>
-                            {/* 1 */}
-                            <div className="border px-4 py-8 flex items-center justify-between hover:bg-[#001F3F] hover:text-white duration-1000 transition bg-gray-300 rounded" id="hover-bg">
-                                <div className="w-3/4">
-                                    <h1 className="text-2xl  font-medium hover:text-[#890c25] cursor-pointer">{colleges[4].name}</h1>
-                                    <p className="">{colleges[4].admission_process}</p>
                                 </div>
-                                <Link to={`/admissionForm/${colleges[4]._id}`}>
+                            </Link>
+                            {/* 5 */}
+                            <Link to={`/admissionForm/${colleges[4]._id}`}>
+                                <div className="border px-4 py-8 flex items-center justify-between hover:bg-[#001F3F] hover:text-white duration-1000 transition bg-gray-300 rounded" id="hover-bg">
+                                    <div className="w-3/4">
+                                        <h1 className="text-2xl  font-medium hover:text-[#890c25] cursor-pointer">{colleges[4].name}</h1>
+                                        <p className="">{colleges[4].admission_process}</p>
+                                    </div>
                                     <LuArrowUpRight className="text-5xl animate-pulse" />
-                                </Link>
-                            </div>
+                                </div>
+                            </Link>
                         </div>
                     </div>
                 </div>

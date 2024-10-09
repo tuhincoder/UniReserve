@@ -8,7 +8,7 @@ const ResearchData = ({ item }) => {
     return (
         <div>
             <Link to={`/researchMore/${_id}`}>
-                <div className="card bg-base-100  border">
+                <div className="card bg-base-100 h-[500px] border">
                     <figure className="px-10 pt-10">
                         <img
                             src={image} alt="Shoes"

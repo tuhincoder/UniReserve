@@ -1,6 +1,9 @@
 import { useLoaderData } from "react-router-dom";
 import Container from "../../component/common/Container";
 import { BsArrow90DegRight } from "react-icons/bs";
+import { FaTimes, FaUserTimes } from "react-icons/fa";
+import { FaTimeline } from "react-icons/fa6";
+import { IoTimeOutline } from "react-icons/io5";
 
 const CollegesDetails = () => {
     const { image, events, event_details, coast, admission_dates } = useLoaderData()
@@ -69,11 +72,13 @@ const CollegesDetails = () => {
 
                     </div>
                     {/* 1 */}
-                    <div className="bg-gray-300 h-[350px] py-10 rounded hover:bg-[#890c25] duration-700 transition hover:text-white px-5 mt-5 space-y-4">
-                        <h2 className="font-bold text-gray-500">INFORMATION</h2>
+                    <div className="bg-gray-300 h-[500px] py-10 rounded hover:bg-[#890c25] duration-700 transition hover:text-white px-5 mt-5 space-y-4">
+                        <h2 className="font-bold text-xl md:text-2xl text-center text-gray-500">Join New Event About Bangladesh History</h2>
+                        <h2 className="text-lg md:text-2xl text-center">H.S.C. In Bangladesh Studies</h2>
                         <div>
                             <h4 className="font-bold">Date & Time:</h4>
-                            <p>{admission_dates}</p>
+
+                            <p className="flex"><IoTimeOutline />10:30 am</p>
                         </div>
                         <div>
                             <h4 className="font-bold">Coast:</h4>

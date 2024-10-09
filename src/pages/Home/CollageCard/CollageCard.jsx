@@ -7,15 +7,6 @@ import useAxiosPublic from "../../../hook/useAxiosPublic";
 const CollageCard = () => {
     const axiosPublic = useAxiosPublic()
 
-    // const [collageCard, setCollageCard] = useState([])
-    // useEffect(() => {
-    //     fetch('/read-college')
-    //         .then(res => res.json())
-    //         .then(data => {
-    //             setCollageCard(data)
-    //         })
-    //     console.log(collageCard);
-    // }, [])
 
     const { data: collegeUniverse = [] } = useQuery({
         queryKey: ['college'],
@@ -28,7 +19,8 @@ const CollageCard = () => {
 
     return (
         <Container>
-            <div className="mt-20">
+            <div className="mt-10">
+                <h2 className="text-2xl md:text-4xl text-gray-500 font-serif text-center mb-3">Another Colleges</h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7">
                     {
                         collegeUniverse.map(singleData => <SingleCoCard key={singleData.id} singleData={singleData}>

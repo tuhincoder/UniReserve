@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-import { Link, NavLink, useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import navLogo from '../assets/images/navLogo.jpg'
 import useAuth from "../hook/useAuth";
 import Navbar from "../component/utils/Shared/Navbar/Navbar";
@@ -29,8 +29,8 @@ const MainLayout = ({ children }) => {
                 <input id="my-drawer-3" type="checkbox" className="drawer-toggle" />
                 <div className="drawer-content flex flex-col ">
                     {/* Navbar */}
-                    <div className="navbar bg-white w-full border-b-2 md:px-10 py-6 ">
-                        <div className="flex-none lg:hidden">
+                    <div className="navbar  bg-white w-full border-b-2 md:px-10 py-6 ">
+                        <div className="flex-none lg:hidden ">
                             <label htmlFor="my-drawer-3" aria-label="open sidebar" className="btn btn-square btn-ghost">
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
@@ -45,11 +45,13 @@ const MainLayout = ({ children }) => {
                                 </svg>
                             </label>
                         </div>
+
                         <img
                             className="w-12 h-12 rounded-3xl hidden lg:block"
                             src={navLogo} alt="" />
-                        <div className="mx-2 flex-1 px-1 text-xl font-medium">Unis <span className="text-[#B8001F] ">Reserve</span></div>
-                        <div className="hidden flex-none lg:block">
+                        <Link to={'/'} className="mx-2 flex-1 px-1 text-xl font-medium">Unis <span className="text-[#B8001F] ">Reserve</span></Link>
+
+                        <div className="hidden flex-none lg:block ">
                             <Navbar />
                         </div>
                         {/* dropdown */}

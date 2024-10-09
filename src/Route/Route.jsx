@@ -30,7 +30,7 @@ const router = createBrowserRouter([
             },
             {
                 path: 'collages/:id',
-                element: <CollegesDetails />,
+                element: <PrivetRout><CollegesDetails /></PrivetRout>,
                 loader: ({ params }) => fetch(`https://unireserve-server.vercel.app/allColleges/${params.id}`)
 
             },
@@ -56,6 +56,11 @@ const router = createBrowserRouter([
                 element: <AdmissionForm />,
                 loader: ({ params }) => fetch(`https://unireserve-server.vercel.app/allColleges/${params.id}`)
             },
+            // {
+            //     path: '/quickAdmission',
+            //     element: <AdmissionForm />,
+
+            // },
             {
                 path: 'myCollage',
                 element: <PrivetRout>
