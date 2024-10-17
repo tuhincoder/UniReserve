@@ -3,6 +3,7 @@ import useAxiosPublic from "../../hook/useAxiosPublic";
 import FormCart from "./FormCart";
 import useAuth from "../../hook/useAuth";
 import Loading from "../../component/common/Loading";
+// import { useState } from "react";
 
 
 const MyCollage = () => {
@@ -12,24 +13,24 @@ const MyCollage = () => {
         queryKey: ['formData', user?.email],
         queryFn: async () => {
             const res = await axiosPublic.get(`/form?email=${user?.email}`)
-            return res.data
+            // console.log(res.data);
+            return res.data;
         }
     })
     // -------------
 
-
     if (isLoading) {
         return <Loading />
-
     }
+
     return (
         <div>
-
             <div>
                 {
-                    form.map(item => <FormCart key={item._id} item={item}></FormCart>)
+                    form.length ? form.map(item => <FormCart key={item._id} item={item}></FormCart>) : <p className="text-center text-3xl font-serif mt-10">NO Data Found</p>
                 }
             </div>
+
         </div>
     );
 };

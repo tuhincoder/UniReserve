@@ -1,5 +1,6 @@
 import { Link, NavLink } from "react-router-dom";
 import useAuth from "../../../../hook/useAuth";
+import { useEffect, useState } from "react";
 
 
 const Navbar = () => {
@@ -10,6 +11,10 @@ const Navbar = () => {
             .then(() => { })
             .catch(() => { })
     }
+
+
+
+
 
     return (
         <div className=" space-x-5 gap-5 text-xl ">

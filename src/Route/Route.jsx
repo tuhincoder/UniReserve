@@ -12,6 +12,7 @@ import AdmissionForm from "../pages/Admission/AdmissionForm";
 import Login from "../pages/Login/Login";
 import Register from "../pages/Register/Register";
 import PrivetRout from "./PrivetRout";
+import ProfileRout from "../pages/ProfileRout/ProfileRout";
 
 
 const router = createBrowserRouter([
@@ -66,6 +67,10 @@ const router = createBrowserRouter([
                 element: <PrivetRout>
                     <MyCollage />
                 </PrivetRout>
+            },
+            {
+                path: 'profile',
+                element: <ProfileRout />
             },
 
         ]
