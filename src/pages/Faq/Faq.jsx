@@ -20,7 +20,7 @@ const Faq = () => {
         <div className="my-10 ">
             <Container>
 
-                <div className="flex flex-col md:flex-row h-[400px] ">
+                <div className="flex flex-col md:flex-row  ">
                     {/* image */}
                     <div className="flex-1 ">
                         <img className=" rounded-xl px-5 py- w-full object-cover h-[350px]" src={faqImg} alt="" />
@@ -29,9 +29,11 @@ const Faq = () => {
                     <div className="flex-1   ">
 
                         <div>
-                            <h5 className="text-[#890c25] font-bold ">Some Question Answer</h5>
-                            <p className="font-medium font-serif md:text-5xl text-lg">Frequently asked
-                                questions</p>
+                            <div className="text-center md:text-start mt-4 m:mt-0">
+                                <h5 className="text-[#890c25] font-bold ">Some Question Answer</h5>
+                                <p className="font-medium font-serif md:text-5xl text-xl ">Frequently asked
+                                    questions</p>
+                            </div>
                             <div className="space-y-4 p-2 ">
                                 {data?.map((data, idx) => (
                                     <div key={idx}>
