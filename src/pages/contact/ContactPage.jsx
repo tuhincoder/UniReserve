@@ -6,6 +6,7 @@ import {
   FaTwitter,
   FaLinkedinIn,
 } from "react-icons/fa";
+import ContactFAQ from "./ContactFAQ";
 
 const ContactPage = () => {
   return (
@@ -150,6 +151,7 @@ const ContactPage = () => {
           </div>
         </div>
       </div>
+      <ContactFAQ />
     </div>
   );
 };
