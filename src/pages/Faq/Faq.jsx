@@ -1,71 +1,119 @@
 import Container from "../../component/common/Container";
-import faqImg from '../../assets/graduate/graduate1.jpg'
+import faqImg from "../../assets/graduate/graduate1.jpg";
 import { useState } from "react";
+import { HiPlus, HiMinus } from "react-icons/hi";
 
 const Faq = () => {
-    const [isOpen, setIsOpen] = useState(null);
+  const [isOpen, setIsOpen] = useState(0); // Prothomti default open thakbe
 
-    const handleToggle = (idx) => setIsOpen((prevIdx) => (prevIdx === idx ? null : idx));
+  const handleToggle = (idx) =>
+    setIsOpen((prevIdx) => (prevIdx === idx ? null : idx));
 
-    const data = [
-        { title: ' What are the basic requirements for college admission?', color: 'green', description: 'Admission requirements vary depending on the college, but most require a high school diploma or equivalent, transcripts, standardized test scores (like SAT or ACT), and letters of recommendation. Some colleges may also require a personal statement or interview.' },
+  const data = [
+    {
+      title: "What are the basic requirements for college admission?",
+      description:
+        "Admission requirements vary depending on the college, but most require a high school diploma or equivalent, transcripts, standardized test scores (like SAT or ACT), and letters of recommendation.",
+    },
+    {
+      title: "When should I apply for college admission?",
+      description:
+        "It is best to start applying during your senior year of high school. Many colleges have application deadlines typically between November and January.",
+    },
+    {
+      title: "How do I apply for financial aid for college?",
+      description:
+        "To apply for financial aid, you'll need to complete the FAFSA form. This will help determine your eligibility for grants, loans, and work-study programs.",
+    },
+  ];
 
-        { title: 'When should I apply for college admission?', color: 'sky', description: 'It is best to start applying during your senior year of high school. Many colleges have application deadlines in the fall or early winter, typically between November and January. Be sure to check the specific deadlines for each college you&apos;re interested in.' },
-        { title: ' How do I apply for financial aid for college?', color: 'purple', description: 'To apply for financial aid, you&apos;ll need to complete the Free Application for Federal Student Aid (FAFSA) form. This will help determine your eligibility for grants, loans, and work-study programs. Some colleges may also have additional financial aid applications, so check with each institution fo' },
+  return (
+    <section className="py-20 bg-white">
+      <Container>
+        <div className="flex flex-col lg:flex-row items-center gap-12">
+          {/* Image Section with Decorative Element */}
+          <div className="flex-1 w-full relative">
+            <div className="absolute -top-4 -left-4 w-24 h-24 bg-[#890c25]/10 rounded-full -z-10 blur-2xl"></div>
+            <div className="relative overflow-hidden rounded-[2.5rem] shadow-2xl border-[12px] border-gray-50">
+              <img
+                className="w-full object-cover h-[400px] md:h-[500px] hover:scale-105 transition-transform duration-1000"
+                src={faqImg}
+                alt="FAQ Illustration"
+              />
+            </div>
+            {/* Success Badge */}
+            <div className="absolute -bottom-6 -right-6 bg-white p-6 rounded-3xl shadow-xl hidden md:block">
+              <p className="text-[#890c25] font-black text-3xl">98%</p>
+              <p className="text-gray-500 text-xs font-bold uppercase tracking-widest">
+                Admission Rate
+              </p>
+            </div>
+          </div>
 
+          {/* FAQ Content Section */}
+          <div className="flex-1 w-full">
+            <div className="mb-10 text-center lg:text-left">
+              <span className="text-[#890c25] font-black tracking-[0.2em] text-xs uppercase bg-[#890c25]/5 px-4 py-2 rounded-full">
+                Support Center
+              </span>
+              <h2 className="text-3xl md:text-5xl font-black text-gray-800 mt-6 leading-tight uppercase tracking-tighter">
+                Common <span className="text-[#890c25]">Queries</span>
+              </h2>
+            </div>
 
-    ];
+            <div className="space-y-4">
+              {data.map((item, idx) => (
+                <div
+                  key={idx}
+                  className={`border-b-2 transition-all duration-300 ${
+                    isOpen === idx ? "border-[#890c25]" : "border-gray-100"
+                  }`}
+                >
+                  <button
+                    onClick={() => handleToggle(idx)}
+                    className="flex items-center justify-between w-full py-6 text-left group"
+                  >
+                    <h4
+                      className={`text-lg md:text-xl font-bold transition-colors ${
+                        isOpen === idx
+                          ? "text-[#890c25]"
+                          : "text-gray-700 group-hover:text-[#890c25]"
+                      }`}
+                    >
+                      {item.title}
+                    </h4>
+                    <span
+                      className={`p-2 rounded-lg transition-all ${
+                        isOpen === idx
+                          ? "bg-[#890c25] text-white rotate-180"
+                          : "bg-gray-50 text-gray-400"
+                      }`}
+                    >
+                      {isOpen === idx ? <HiMinus /> : <HiPlus />}
+                    </span>
+                  </button>
 
-    return (
-        <div className="my-10 ">
-            <Container>
-
-                <div className="flex flex-col md:flex-row  ">
-                    {/* image */}
-                    <div className="flex-1 ">
-                        <img className=" rounded-xl px-5 py- w-full object-cover h-[350px]" src={faqImg} alt="" />
+                  <div
+                    className={`grid overflow-hidden transition-all duration-300 ease-in-out ${
+                      isOpen === idx
+                        ? "grid-rows-[1fr] opacity-100 pb-6"
+                        : "grid-rows-[0fr] opacity-0"
+                    }`}
+                  >
+                    <div className="overflow-hidden">
+                      <p className="text-gray-500 text-sm md:text-base leading-relaxed font-medium pr-10">
+                        {item.description}
+                      </p>
                     </div>
-                    {/* faq */}
-                    <div className="flex-1   ">
-
-                        <div>
-                            <div className="text-center md:text-start mt-4 m:mt-0">
-                                <h5 className="text-[#890c25] font-bold ">Some Question Answer</h5>
-                                <p className="font-medium font-serif md:text-5xl text-xl ">Frequently asked
-                                    questions</p>
-                            </div>
-                            <div className="space-y-4 p-2 ">
-                                {data?.map((data, idx) => (
-                                    <div key={idx}>
-                                        {/* header / Title */}
-                                        <div onClick={() => handleToggle(idx)} className={`px- md:px-8 py-3 ${idx === 0 ? 'bg-green-200 border-green-500' : idx === 1 ? 'bg-sky-200 border-sky-500' : idx === 2 ? 'bg-purple-200 border-purple-500' : idx === 3 ? 'bg-amber-200 border-amber-500' : idx === 4 ? 'bg-red-200 border-red-500' : 'bg-orange-200 border-orange-500'} border-l-[3px] cursor-pointer`}>
-                                            <div className="flex items-center">
-                                                <span>
-                                                    <svg className={`mr-4 ${idx === 0 ? 'fill-green-900' : idx === 1 ? 'fill-sky-900' : idx === 2 ? 'fill-purple-900' : idx === 3 ? 'fill-amber-900' : idx === 4 ? 'fill-red-900' : 'fill-orange-900'} shrink-0`} width="16" height="16" xmlns="http://www.w3.org/2000/svg"><rect y="7" width="16" height="2" rx="1" className={`transform origin-center transition duration-200 ease-out ${isOpen === idx && '!rotate-180'}`} /><rect y="7" width="16" height="2" rx="1" className={`transform origin-center rotate-90 transition duration-200 ease-out ${isOpen === idx && '!rotate-180'}`} /></svg>
-                                                </span>
-                                                <h4
-                                                    className={`${idx === 0 ? 'text-green-900' : idx === 1 ? 'text-sky-900' : idx === 2 ? 'text-purple-900' : idx === 3 ? 'text-amber-900' : idx === 4 ? 'text-red-900' : 'text-orange-900'} text-xl`}>
-                                                    {data.title}
-                                                </h4>
-                                            </div>
-                                        </div>
-                                        {/* body / content  */}
-                                        <div className={`grid overflow-hidden transition-all duration-300 ease-in-out   ${isOpen === idx ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0'}`}>
-                                            <div className="overflow-hidden">
-                                                <div className={`pb-6 pr-4 pl-14 md:pl-16 border-l-[3px] text-sm  ${idx === 0 ? 'text-green-900 bg-green-200 border-green-500' : idx === 1 ? 'text-sky-900 bg-sky-200 border-sky-500' : idx === 2 ? 'text-purple-900 bg-purple-200 border-purple-500' : idx === 3 ? 'text-amber-900 bg-amber-200 border-amber-500' : idx === 4 ? 'text-red-900 bg-red-200 border-red-500' : 'text-orange-900 bg-orange-200 border-orange-500'} `}>
-                                                    {data?.description}
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                ))}
-                            </div>
-                        </div>
-                    </div>
+                  </div>
                 </div>
-            </Container>
+              ))}
+            </div>
+          </div>
         </div>
-    );
+      </Container>
+    </section>
+  );
 };
 
 export default Faq;
