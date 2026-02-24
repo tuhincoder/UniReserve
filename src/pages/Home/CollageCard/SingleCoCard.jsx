@@ -18,11 +18,10 @@ const SingleCoCard = ({ singleData }) => {
     _id,
   } = singleData || {};
 
-  // Date theke Year bad deyar logic (e.g., "12 May 2024" hobe "12 May")
   const formatDate = (dateString) => {
     if (!dateString) return "N/A";
     const parts = dateString.split(" ");
-    return parts.slice(0, 2).join(" "); // Sudhu prothom 2ti part (Day and Month) nibe
+    return parts.slice(0, 2).join(" ");
   };
 
   return (
@@ -34,7 +33,7 @@ const SingleCoCard = ({ singleData }) => {
           src={image}
           alt={name}
         />
-        {/* Admission Date Badge - Only Day & Month */}
+
         <div className="absolute top-5 left-5 bg-white/90 backdrop-blur-md px-4 py-2 rounded-2xl shadow-xl flex items-center gap-2 border border-white">
           <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse"></div>
           <span className="text-[11px] font-black text-gray-800 uppercase tracking-tight">
@@ -78,7 +77,6 @@ const SingleCoCard = ({ singleData }) => {
           </div>
         </div>
 
-        {/* Research Summary */}
         <div className="mb-8">
           <p className="text-sm text-gray-400 leading-relaxed line-clamp-2 font-medium">
             <span className="text-[#890c25] font-bold">Research:</span>{" "}
@@ -86,7 +84,6 @@ const SingleCoCard = ({ singleData }) => {
           </p>
         </div>
 
-        {/* Modern Details Button */}
         <div className="mt-auto">
           <Link
             to={`/clgDetails/${_id}`}

@@ -2,6 +2,7 @@
 import { useEffect, useState } from "react";
 import Navbar from "../component/utils/Shared/Navbar/Navbar";
 import TopNavbar from "../component/TopNavbar";
+import ScrollToTop from "../component/ScrollToTop";
 
 const MainLayout = ({ children }) => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -18,16 +19,12 @@ const MainLayout = ({ children }) => {
 
   return (
     <div className="min-h-screen bg-white">
-      {/* 1. TopNavbar: Mobile-e thakbe, Desktop-e scroll korle hide hobe */}
+      <ScrollToTop></ScrollToTop>
       <TopNavbar />
 
-      {/* 2. Main Navbar: Eti sticky thakbe ebong z-index sobar upore thakbe */}
       <Navbar />
 
-      {/* 3. Main Content: Banner ebong onno shob ekhane thakbe */}
       <main className="relative">{children}</main>
-
-      {/* Footer ekhane thakte pare */}
     </div>
   );
 };

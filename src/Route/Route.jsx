@@ -13,77 +13,94 @@ import Login from "../pages/Login/Login";
 import Register from "../pages/Register/Register";
 import PrivetRout from "./PrivetRout";
 import ProfileRout from "../pages/ProfileRout/ProfileRout";
-
+import ContactPage from "../pages/contact/ContactPage";
 
 const router = createBrowserRouter([
-    {
-        path: '/',
-        element: <App />,
-        errorElement: <ErrorPage />,
-        children: [
-            {
-                path: '',
-                element: <Home />
-            },
-            {
-                path: 'collage',
-                element: <Collages />
-            },
-            {
-                path: 'collages/:id',
-                element: <PrivetRout><CollegesDetails /></PrivetRout>,
-                loader: ({ params }) => fetch(`https://unireserve-server.vercel.app/allColleges/${params.id}`)
+  {
+    path: "/",
+    element: <App />,
+    errorElement: <ErrorPage />,
+    children: [
+      {
+        path: "",
+        element: <Home />,
+      },
+      {
+        path: "collage",
+        element: <Collages />,
+      },
+      {
+        path: "collages/:id",
+        element: (
+          <PrivetRout>
+            <CollegesDetails />
+          </PrivetRout>
+        ),
+        loader: ({ params }) =>
+          fetch(
+            `https://unireserve-server.vercel.app/allColleges/${params.id}`
+          ),
+      },
+      // college card details
+      {
+        path: "/clgDetails/:id",
+        element: <CollegeCardDetails />,
+        loader: ({ params }) =>
+          fetch(
+            `https://unireserve-server.vercel.app/read-college/${params.id}`
+          ),
+      },
+      // research
 
-            },
-            // college card details
-            {
-                path: '/clgDetails/:id',
-                element: <CollegeCardDetails />,
-                loader: ({ params }) => fetch(`https://unireserve-server.vercel.app/read-college/${params.id}`)
-            },
-            // research
+      {
+        path: "researchMore/:id",
+        element: <ResearchMore />,
+        loader: ({ params }) =>
+          fetch(`https://unireserve-server.vercel.app/research/${params.id}`),
+      },
+      {
+        path: "admission",
+        element: <Admission />,
+      },
+      {
+        path: "admissionForm/:id",
+        element: <AdmissionForm />,
+        loader: ({ params }) =>
+          fetch(
+            `https://unireserve-server.vercel.app/allColleges/${params.id}`
+          ),
+      },
+      // {
+      //     path: '/quickAdmission',
+      //     element: <AdmissionForm />,
 
-            {
-                path: 'researchMore/:id',
-                element: <ResearchMore />,
-                loader: ({ params }) => fetch(`https://unireserve-server.vercel.app/research/${params.id}`)
-            },
-            {
-                path: 'admission',
-                element: <Admission />
-            },
-            {
-                path: 'admissionForm/:id',
-                element: <AdmissionForm />,
-                loader: ({ params }) => fetch(`https://unireserve-server.vercel.app/allColleges/${params.id}`)
-            },
-            // {
-            //     path: '/quickAdmission',
-            //     element: <AdmissionForm />,
-
-            // },
-            {
-                path: 'myCollage',
-                element: <PrivetRout>
-                    <MyCollage />
-                </PrivetRout>
-            },
-            {
-                path: 'profile',
-                element: <ProfileRout />
-            },
-
-        ]
-
-    },
-    {
-        path: '/login',
-        element: <Login />
-    },
-    {
-        path: '/register',
-        element: <Register />
-    },
-])
+      // },
+      {
+        path: "myCollage",
+        element: (
+          <PrivetRout>
+            <MyCollage />
+          </PrivetRout>
+        ),
+      },
+      {
+        path: "profile",
+        element: <ProfileRout />,
+      },
+      {
+        path: "contact",
+        element: <ContactPage />,
+      },
+    ],
+  },
+  {
+    path: "/login",
+    element: <Login />,
+  },
+  {
+    path: "/register",
+    element: <Register />,
+  },
+]);
 
 export default router;

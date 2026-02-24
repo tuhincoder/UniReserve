@@ -66,6 +66,13 @@ const Navbar = () => {
       >
         <AiOutlineUser className="text-lg lg:hidden" /> MY COLLEGE
       </NavLink>
+      <NavLink
+        to="/contact"
+        className={navLinkStyles}
+        onClick={() => setIsOpen(false)}
+      >
+        <AiOutlineUser className="text-lg lg:hidden" /> CONTACT US
+      </NavLink>
     </>
   );
 
