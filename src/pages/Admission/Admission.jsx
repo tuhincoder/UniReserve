@@ -9,6 +9,7 @@ import {
   FaUserCheck,
   FaAward,
 } from "react-icons/fa";
+import AdmissionHero from "./AdmissionHero";
 
 const Admission = () => {
   const [colleges, isLoading] = useColleges();
@@ -49,6 +50,7 @@ const Admission = () => {
     <section className="bg-[#fcfcfc] py-16 md:py-24">
       <Container>
         {/* Section Header */}
+        <AdmissionHero></AdmissionHero>
         <div className="max-w-3xl mx-auto text-center mb-16 px-4">
           <span className="text-[#890c25] font-black tracking-[0.3em] text-[10px] uppercase bg-[#890c25]/5 px-4 py-2 rounded-full inline-block mb-4">
             Admission Portal 2026
