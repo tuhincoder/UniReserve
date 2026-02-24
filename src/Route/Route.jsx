@@ -11,7 +11,7 @@ import CollegesDetails from "../pages/Collages/CollegesDetails";
 import AdmissionForm from "../pages/Admission/AdmissionForm";
 import Login from "../pages/Login/Login";
 import Register from "../pages/Register/Register";
-import PrivetRout from "./PrivetRout";
+
 import ProfileRout from "../pages/ProfileRout/ProfileRout";
 import ContactPage from "../pages/contact/ContactPage";
 
@@ -31,11 +31,7 @@ const router = createBrowserRouter([
       },
       {
         path: "collages/:id",
-        element: (
-          <PrivetRout>
-            <CollegesDetails />
-          </PrivetRout>
-        ),
+        element: <CollegesDetails />,
         loader: ({ params }) =>
           fetch(
             `https://unireserve-server.vercel.app/allColleges/${params.id}`
@@ -77,11 +73,7 @@ const router = createBrowserRouter([
       // },
       {
         path: "myCollage",
-        element: (
-          <PrivetRout>
-            <MyCollage />
-          </PrivetRout>
-        ),
+        element: <MyCollage />,
       },
       {
         path: "profile",

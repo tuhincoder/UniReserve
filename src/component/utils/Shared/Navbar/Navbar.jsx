@@ -158,68 +158,87 @@ const Navbar = () => {
 
         {/* Sidebar Content */}
         <div
-          className={`absolute top-0 right-0 w-[300px] h-full bg-white shadow-2xl transition-transform duration-500 flex flex-col ${
-            isOpen ? "translate-x-0" : "translate-x-full"
+          className={`fixed inset-0 lg:hidden transition-all duration-500 ${
+            isOpen ? "visible z-[2000]" : "invisible z-[-1]"
           }`}
         >
-          <div className="p-6 flex justify-between items-center border-b-2 border-gray-50">
-            <div className="flex items-center gap-2">
-              <div className="w-8 h-8 bg-[#890c25] rounded-lg flex items-center justify-center text-white font-bold">
-                U
-              </div>
-              <span className="font-black text-gray-800 tracking-tight">
-                UniReserve
-              </span>
-            </div>
-            <button
-              onClick={() => setIsOpen(false)}
-              className="text-2xl p-2 bg-gray-50 text-gray-500 hover:text-red-600 rounded-full transition-all"
-            >
-              <AiOutlineClose />
-            </button>
-          </div>
+          {/* Overlay - Pichon-er content block korar jonno */}
+          <div
+            className={`fixed inset-0 bg-black/60 backdrop-blur-sm transition-opacity duration-500 ${
+              isOpen ? "opacity-100" : "opacity-0"
+            }`}
+            onClick={() => setIsOpen(false)}
+          ></div>
 
-          <div className="flex flex-col p-6 space-y-3 flex-grow overflow-y-auto">
-            <p className="text-[10px] font-bold text-gray-400 tracking-widest mb-2">
-              MAIN NAVIGATION
-            </p>
-            {navItems}
-          </div>
-
-          <div className="p-6 border-t bg-gray-50/50">
-            {user ? (
-              <div className="bg-white p-4 rounded-2xl shadow-sm border border-gray-100">
-                <div className="flex items-center gap-3 mb-4">
-                  <img
-                    src={user?.photoURL}
-                    alt="user"
-                    className="w-12 h-12 rounded-full border-2 border-[#890c25]/20 shadow-sm"
-                  />
-                  <div className="overflow-hidden">
-                    <p className="font-black text-gray-800 truncate text-sm">
-                      {user?.displayName}
-                    </p>
-                    <p className="text-[10px] text-gray-400 truncate font-medium">
-                      {user?.email}
-                    </p>
-                  </div>
+          {/* Sidebar Content - Ekhane fixed use kora hoyeche */}
+          <div
+            className={`fixed top-0 right-0 w-[300px] h-[100dvh] bg-white shadow-2xl transition-transform duration-500 flex flex-col z-[2001] ${
+              isOpen ? "translate-x-0" : "translate-x-full"
+            }`}
+          >
+            {/* Header - Fixed Height */}
+            <div className="p-6 flex justify-between items-center border-b-2 border-gray-50 shrink-0 bg-white">
+              <div className="flex items-center gap-2">
+                <div className="w-8 h-8 bg-[#890c25] rounded-lg flex items-center justify-center text-white font-bold">
+                  U
                 </div>
-                <button
-                  onClick={handleLogOut}
-                  className="w-full bg-red-50 text-red-600 py-3 rounded-xl font-bold text-xs border border-red-100 active:scale-95 transition-transform"
-                >
-                  LOGOUT ACCOUNT
-                </button>
+                <span className="font-black text-gray-800 tracking-tight">
+                  UniReserve
+                </span>
               </div>
-            ) : (
-              <Link
-                to="/login"
+              <button
                 onClick={() => setIsOpen(false)}
-                className="block w-full bg-[#890c25] text-white text-center py-4 rounded-2xl font-black shadow-lg shadow-[#890c25]/20"
+                className="text-2xl p-2 bg-gray-50 text-gray-500 hover:text-red-600 rounded-full transition-all"
               >
-                LOGIN NOW
-              </Link>
-            )}
+                <AiOutlineClose />
+              </button>
+            </div>
+
+            {/* Scrollable Links Area */}
+            <div className="flex flex-col p-6 space-y-3 flex-grow overflow-y-auto no-scrollbar">
+              <p className="text-[10px] font-bold text-gray-400 tracking-widest mb-2 uppercase">
+                Main Navigation
+              </p>
+              {/* Tomar navItems ekhane scroll hobe kintu login button norbe na */}
+              {navItems}
+            </div>
+
+            {/* Footer Section - Fixed at the bottom */}
+            <div className="p-6 border-t bg-gray-50 shrink-0">
+              {user ? (
+                <div className="bg-white p-4 rounded-2xl shadow-sm border border-gray-100">
+                  <div className="flex items-center gap-3 mb-4">
+                    <img
+                      src={user?.photoURL}
+                      alt="user"
+                      className="w-10 h-10 rounded-full border-2 border-[#890c25]/20 object-cover"
+                    />
+                    <div className="overflow-hidden">
+                      <p className="font-black text-gray-800 truncate text-xs">
+                        {user?.displayName}
+                      </p>
+                      <p className="text-[9px] text-gray-400 truncate font-medium">
+                        {user?.email}
+                      </p>
+                    </div>
+                  </div>
+                  <button
+                    onClick={handleLogOut}
+                    className="w-full bg-red-50 text-red-600 py-3 rounded-xl font-bold text-[10px] border border-red-100 active:scale-95 transition-transform"
+                  >
+                    LOGOUT ACCOUNT
+                  </button>
+                </div>
+              ) : (
+                <Link
+                  to="/login"
+                  onClick={() => setIsOpen(false)}
+                  className="block w-full bg-[#890c25] text-white text-center py-4 rounded-2xl font-black text-xs shadow-lg shadow-[#890c25]/20 active:scale-95 transition-transform"
+                >
+                  LOGIN NOW
+                </Link>
+              )}
+            </div>
           </div>
         </div>
       </div>
