@@ -1,49 +1,81 @@
 /* eslint-disable react/prop-types */
-
 import { Rating } from "@smastrom/react-rating";
-import '@smastrom/react-rating/style.css'
-import { FaCalendar } from "react-icons/fa";
-import { GiArchiveResearch } from "react-icons/gi";
+import "@smastrom/react-rating/style.css";
+import { FaCalendarAlt } from "react-icons/fa";
+import { GiMaterialsScience } from "react-icons/gi";
 import { Link } from "react-router-dom";
 
 const CollegesCard = ({ college }) => {
-    const { image, name, rating, admission_dates, number_of_research, _id } = college || {};
+  const { image, name, rating, number_of_research, _id } = college || {};
 
-    return (
-        <div>
-            <div className="card  bg-base-100  shadow-xl ">
-                <figure>
-                    <img
-                        className="w-full h-[250px] object-cover"
-                        src={image}
-                        alt="Shoes" />
-                </figure>
-                <div className=" px-3 py-3">
-                    <div className="flex justify-between items-center">
-                        <p className="text-gray-500 text-center flex items-center gap-2"><FaCalendar /> {admission_dates}</p>
-                        <p className="text-gray-500 text-center flex items-center gap-2"><GiArchiveResearch />
-                            {number_of_research}</p>
+  // --- Dynamic Year Logic ---
+  // Eti auto-update hobe: 2026 hole dekhabe "2026-27"
+  const currentYear = new Date().getFullYear();
+  const nextYear = (currentYear + 1).toString().slice(-2);
+  const dynamicSession = `${currentYear}-${nextYear}`;
 
-                    </div>
-                    <div className="flex items-center justify-between">
-                        <h2 className="card-title">{name}</h2>
-                        <Rating
-                            style={{ maxWidth: 80 }}
-                            value={rating}
-                            readOnly
-                        />
-                    </div>
-
-                    <div className="">
-                        <Link to={`/collages/${_id}`}>
-                            <button className="py-2 w-40 h-10 px-4 mb-4 mt-6 bg-[#890c25] hover:bg-sky-600 duration-300 text-white flex items-center justify-center overflow-hidden mx-auto rounded hover:overflow-visible relative group"><svg viewBox="0 0 1024 1024" className="icon rotate-45 group-hover:duration-700 absolute w-12 -translate-x-full translate-y-full scale-0 group-hover:scale-100 group-hover:translate-x-8 group-hover:-translate-y-8 duration-150" version="1.1" xmlns="http://www.w3.org/2000/svg" fill="#000000"><g strokeWidth="0"></g><g strokeLinecap="round" strokeLinejoin="round"></g><g ><path d="M244.5 662l268.1-446.4 268 446.4z" fill="#9ED5E4"></path><path d="M780.6 676.2H244.5c-5.3 0-10.2-2.7-12.8-7.1s-2.6-9.8 0-14.3l268.1-446.3c2.6-4.4 7.5-7.1 12.8-7.1 5.3 0 10.2 2.7 12.8 7.1l268.1 446.3c2.6 4.4 2.6 9.8 0 14.3-2.7 4.4-7.6 7.1-12.9 7.1z m-510.5-28.5H755L512.6 244.2 270.1 647.7z" fill="#154B8B"></path><path d="M512.6 23s129 131.7 129 352.4-129 376-129 376-129-155.3-129-376S512.6 23 512.6 23z" fill="#F7F9F9"></path><path d="M512.6 765.7c-4.5 0-8.8-2-11.6-5.4-1.4-1.6-33.7-40.9-66.4-108.1-30.1-61.9-65.9-160.2-65.9-276.8 0-116.9 36-208.8 66.1-265.4 32.8-61.6 65.5-95.3 66.9-96.7 2.8-2.9 6.7-4.5 10.8-4.5 4.1 0 8 1.6 10.8 4.5 1.4 1.4 34.1 35.1 66.9 96.7 30.2 56.6 66.1 148.6 66.1 265.4 0 116.6-35.8 214.9-65.9 276.8-32.6 67.2-65 106.5-66.4 108.1-2.7 3.4-6.9 5.4-11.4 5.4z m0-720.5c-11.9 14.5-32 41.3-51.8 78.8-28.4 53.6-62.4 140.8-62.4 251.5 0 111.4 34.3 205.4 63.1 264.7 19.6 40.3 39.1 70.2 51.1 86.9 12-16.9 31.9-47.2 51.5-87.8 28.6-59.1 62.7-152.9 62.7-263.9 0-110.7-33.9-197.8-62.4-251.5-19.9-37.4-40-64.3-51.8-78.7z" fill="#154B8B"></path><path d="M447.6 278.9a65 62.4 0 1 0 130 0 65 62.4 0 1 0-130 0Z" fill="#9ED5E4"></path><path d="M512.6 355.6c-44 0-79.8-34.4-79.8-76.7s35.8-76.7 79.8-76.7 79.8 34.4 79.8 76.7-35.9 76.7-79.8 76.7z m0-124.8c-27.6 0-50.1 21.6-50.1 48.2s22.5 48.2 50.1 48.2 50.1-21.6 50.1-48.2-22.5-48.2-50.1-48.2z" fill="#154B8B"></path><path d="M570 860.9c0 13 1.5-7.5-57.4 141.4-56.2-142.1-57.4-128.4-57.4-141.4 0-36 25.7-65.2 57.4-65.2s57.4 29.2 57.4 65.2z" fill="#9ED5E4"></path><path d="M512.5 1016.6c-6.2 0-11.7-3.7-13.9-9.2-31.2-78.9-45.6-110.1-51.8-123.3-5.4-11.6-6.6-14.3-6.6-23.1 0-43.8 32.4-79.5 72.2-79.5 39.8 0 72.2 35.7 72.2 79.5v0.9c0 7.7-1 9.9-5.3 19.1-5.8 12.4-19.5 41.6-53.1 126.5-2 5.4-7.5 9.1-13.7 9.1z m0-206.7c-23.5 0-42.6 22.9-42.6 51 0 2.7 0 2.7 4.1 11.5 5.7 12.3 16.5 35.7 38.5 90.1 24-59.5 34.8-82.6 39.9-93.4 1.2-2.5 2.3-4.9 2.7-5.9v-2.3c0-28.1-19.1-51-42.6-51z" fill="#154B8B"></path></g></svg><span className="duration-500">Explore</span></button>
-                        </Link>
-
-                    </div>
-                </div>
-            </div>
+  return (
+    <div className="group h-full">
+      <div className="bg-white rounded-[2rem] border border-gray-100 shadow-sm hover:shadow-2xl transition-all duration-500 flex flex-col h-full overflow-hidden">
+        {/* Image Section */}
+        <div className="relative overflow-hidden h-56 md:h-64">
+          <img
+            className="w-full h-full object-cover transform group-hover:scale-110 duration-700"
+            src={image}
+            alt={name}
+          />
+          {/* Research Count Badge */}
+          <div className="absolute top-4 right-4 bg-white/90 backdrop-blur-md px-3 py-1 rounded-full shadow-sm flex items-center gap-2">
+            <GiMaterialsScience className="text-[#890c25]" />
+            <span className="text-[10px] font-bold text-gray-700 uppercase tracking-tighter">
+              {number_of_research} Researches
+            </span>
+          </div>
         </div>
-    );
+
+        {/* Content Section */}
+        <div className="p-6 flex flex-col flex-grow">
+          <div className="flex justify-between items-start mb-4 gap-2">
+            <h2 className="text-xl md:text-2xl font-black text-gray-800 leading-tight tracking-tighter uppercase group-hover:text-[#890c25] transition-colors">
+              {name}
+            </h2>
+            <div className="pt-1 shrink-0">
+              <Rating style={{ maxWidth: 80 }} value={rating} readOnly />
+            </div>
+          </div>
+
+          {/* Meta Info - Dynamic Session */}
+          <div className="flex items-center gap-4 text-gray-500 mb-6">
+            <div className="flex items-center gap-2 bg-[#890c25]/5 px-3 py-1.5 rounded-lg border border-[#890c25]/10">
+              <FaCalendarAlt className="text-[#890c25] text-xs" />
+              <span className="text-[11px] font-black text-[#890c25] uppercase tracking-widest">
+                Admission {dynamicSession}
+              </span>
+            </div>
+          </div>
+
+          {/* Explore Button */}
+          <div className="mt-auto">
+            <Link to={`/collages/${_id}`}>
+              <button className="w-full h-12 bg-[#890c25] hover:bg-[#6e081d] text-white flex items-center justify-center gap-2 overflow-hidden rounded-xl relative group transition-all duration-300">
+                <span className="font-black uppercase tracking-widest text-xs z-10 transition-all duration-500 group-hover:tracking-[0.2em]">
+                  View Details
+                </span>
+
+                {/* Rocket/Arrow Animation */}
+                <svg
+                  viewBox="0 0 1024 1024"
+                  className="absolute w-8 -translate-x-full translate-y-full opacity-0 group-hover:opacity-20 group-hover:translate-x-20 group-hover:-translate-y-10 duration-700 transition-all pointer-events-none fill-white"
+                >
+                  <path d="M244.5 662l268.1-446.4 268 446.4z"></path>
+                </svg>
+              </button>
+            </Link>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
 };
 
 export default CollegesCard;
